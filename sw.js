@@ -1,9 +1,10 @@
-const CACHE_NAME = 'test-pwa-cache-v1';
+const CACHE_NAME = 'test-pwa-cache-v2';
 // Remove the leading slashes so they are relative to the folder
 const urlsToCache = [
   './',
-  'index.html',
-  'manifest.json'
+  './index.html',
+  './manifest.json',
+  './https://yashwant-singh.com.np/logoo/icon-192.png'
 ];
 
 self.addEventListener('install', event => {
