@@ -33,12 +33,10 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
+                // Adding {scope: './'} helps GitHub Pages understand the folder structure
+                navigator.serviceWorker.register('sw.js', {scope: './'})
                     .then((registration) => {
-                        console.log('ServiceWorker registered with scope:', registration.scope);
-                    })
-                    .catch((error) => {
-                        console.log('ServiceWorker registration failed:', error);
+                        console.log('Registered at:', registration.scope);
                     });
             });
         }
